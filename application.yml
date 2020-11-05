@@ -1,0 +1,22 @@
+server:
+    port: 6000
+    
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+        defaultZone: http://localhost:1000/eureka/    
+spring: 
+  application:
+    name: SpringCloud-ConfigServer
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Yhongyao/Git_Project.git
+          username: Yhongyao
+          password: woshishui123;
+      label: master
